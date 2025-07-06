@@ -1,11 +1,15 @@
+// App.js
+import React from 'react'
+import Login from './pages/Login'
+import { Route, Routes } from 'react-router-dom'
+import Profile from './pages/Profile'
 
-
-function App() {
-
+const App = () => {
   return (
-    <>
-      
-    </>
+    <Routes>
+      <Route path='/' element={<Login/>} />
+      <Route path='/profile' element={<Profile/>} />
+    </Routes>
   )
 }
 
