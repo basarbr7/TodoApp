@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useLoginMutation } from '../redux/todosApi'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -10,8 +10,12 @@ const Login = () => {
     const [login, { data, error, isLoading }] = useLoginMutation()
     const navigate = useNavigate()
     const location = useLocation();
+    const token = localStorage.getItem("token")
 
     const from = location.state?.from?.pathname || '/';
+    if (token) {
+        return <Navigate to={'/'} replace />
+    }
 
     const handleChange =(e)=>{
         const {name, value} = e.target

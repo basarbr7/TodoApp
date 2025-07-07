@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import ProtecttedLayout from './layout/ProtecttedLayout'
 import About from './pages/About'
 import RootlayOut from './layout/RootlayOut'
+import ErrorPage from './pages/ErrorPage'
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         <Route element={<ProtecttedLayout/>} >
           <Route path='/about' element={<About/>} />
         </Route>
-          <Route path='/profile' element={<Profile/>} />
+        <Route path='/profile' element={<Profile/>} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     </Routes>
   )

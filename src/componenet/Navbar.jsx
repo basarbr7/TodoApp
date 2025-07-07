@@ -17,9 +17,7 @@ const Navbar = () => {
         setIsLoggedIn(!!token);
     }
     checkLogin()
-
     window.addEventListener("authChanged", checkLogin)
-
     return () => {
         window.removeEventListener('authChanged', checkLogin);
     };
