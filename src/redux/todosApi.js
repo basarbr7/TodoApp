@@ -23,10 +23,6 @@ export const todosApi = createApi({
             url: "user/login",
             method: "POST",
             body: credentials, // eta na dile login faild dakai
-            // headers: {
-            //     'Content-Type': 'application/json',
-            //     'Accept': 'application/json',
-            // }
         })
     }),
      getProfile: builder.query({

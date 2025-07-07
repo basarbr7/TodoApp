@@ -6,7 +6,7 @@ const Profile = () => {
   const { data, error, isLoading } = useGetProfileQuery(userId)  //id pathano...
 
   if (isLoading) return <p>Loading...</p>
-  if (error) return <p>Error loading profile</p>
+  if (error) return <p>Please Login frist then see your profile</p>
 
   return (
     <div className='p-4'>
