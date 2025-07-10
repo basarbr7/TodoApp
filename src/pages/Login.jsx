@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLoginMutation } from '../redux/todosApi'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 
@@ -13,10 +13,10 @@ const Login = () => {
     const token = localStorage.getItem("token")
 
     const from = location.state?.from?.pathname || '/';
+    
     if (token) {
-        return <Navigate to={'/'} replace />
+        return <Navigate to={from} replace />
     }
-
     const handleChange =(e)=>{
         const {name, value} = e.target
         setFormData(prev=>({...prev, [name]: value}))

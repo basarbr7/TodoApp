@@ -2,9 +2,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const menuItems= [
-    {name: "home", src: "/"},
-    {name: "about", src: "/about"},
-    {name: "profile", src: "/profile"},
+    {name: "Home", src: "/"},
+    {name: "About", src: "/about"},
+    {name: "Todos", src: "/todolist"},
+    {name: "Profile", src: "/profile"},
 ]
 
 const Navbar = () => {
