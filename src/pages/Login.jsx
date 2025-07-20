@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useLoginMutation } from '../redux/todosApi'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 

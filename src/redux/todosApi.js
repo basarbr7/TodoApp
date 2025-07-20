@@ -25,24 +25,39 @@ export const todosApi = createApi({
             body: credentials, // eta na dile login faild dakai
         })
     }),
+
      getProfile: builder.query({
         query: (me) => `/user/${me}`,
         method: "GET",
     }),
+
     getTodos: builder.query({
       query: (userId)=>`/todos/user/${userId}`
     }),
+
     getTodo: builder.query({
       query: (id)=>`/todos/${id}`
     }),
-    // addTodo: buildErrorMessage.mutation({
-    //   query: ()=>{
-        
-    //   }
-    // })
+
+    addTodo: builder.mutation({
+      query: (newTodo)=>({
+        url: '/todos/add',
+        method: 'POST',
+        body: newTodo,
+      })
+    }),
+
+    updateTodo: builder.mutation({
+      query: ({ id, data })=>({
+        url: `/todos/${id}`,
+        method: 'PUT',
+        body: data,
+      })
+    }),
+
   })
 })
 
-export const { useLoginMutation, useGetProfileQuery, useGetTodosQuery, useGetTodoQuery } = todosApi
+export const { useLoginMutation, useGetProfileQuery, useGetTodosQuery, useGetTodoQuery, useAddTodoMutation, useUpdateTodoMutation } = todosApi
 
 export default todosApi
