@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../componenet/Navbar'
 import { Outlet } from 'react-router-dom'
+import Footer from '../componenet/Footer'
 
 const RootlayOut = () => {
   return (
@@ -9,6 +10,7 @@ const RootlayOut = () => {
         <div className=''>
             <Outlet/>
         </div>
+        <Footer/>
     </>
   )
 }

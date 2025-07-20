@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-100 shadow px-4 py-3 relative">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <h2 className="text-xl font-bold">My App</h2>
+        <h2 className="text-xl font-bold">Todo App</h2>
 
         {/* Hamburger for mobile */}
         <div className="lg:hidden">

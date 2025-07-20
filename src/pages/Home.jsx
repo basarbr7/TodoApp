@@ -18,7 +18,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className='max-w-4xl mx-auto px-4 py-10'>
+    <div className='max-w-4xl h-svh mx-auto px-4 my-10'>
       {/* Title */}
       <h1 className='text-3xl font-bold text-center text-amber-600 mb-6'>Welcome to Todo App</h1>
 
